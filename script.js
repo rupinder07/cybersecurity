@@ -1,10 +1,21 @@
 // Function to toggle submenu visibility
 function toggleSubMenu(subMenuId) {
     var subMenu = document.getElementById(subMenuId);
-    if (subMenu.style.display === "block") {
-      subMenu.style.display = "none";
+
+    // Get all submenus
+    var allSubMenus = document.querySelectorAll('.sub-menu');
+
+    // Close all submenus
+    allSubMenus.forEach(function (menu) {
+        if (menu !== subMenu) {
+        menu.style.display = 'none';
+        }
+    });
+
+    if (subMenu.style.display === 'block') {
+        subMenu.style.display = 'none';
     } else {
-      subMenu.style.display = "block";
+        subMenu.style.display = 'block';
     }
   }
   
