@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <script src="script.js" defer></script> <!-- Link to your JavaScript file -->
+</head>
+<body>
+    <header> <h1> Cybersecurity </h1> </header>
+    <div class="nav-bar" id="navBar">
+    <ul>
+        <li class="nav-item" onclick="toggleSubMenu('authSubMenu')">Authentication</li>
+        <ul id="authSubMenu" class="sub-menu" style="list-style-type: none;">
+        <li class="sub-menu-item" onclick="loadExternalContent('content', 'openidconnect.html')">OpenIDConnect</li>
+        </ul>
+
+        <li class="nav-item" onclick="toggleSubMenu('authzSubMenu')">Authorization</li>
+        <ul id="authzSubMenu" class="sub-menu" style="list-style-type: none;">
+        <li class="sub-menu-item" onclick="loadExternalContent('content', 'oauth.html')">OAuth2.0</li>
+        </ul>
+
+        <li class="nav-item">Encryption</li>
+        <li class="nav-item">Network Protocols</li>
+        <li class="nav-item">Owasp top 10</li>
+    </ul>
+    </div>
+
+    <div class="content" id="content" style="margin-left: 17%;"> <!-- Adjust margin-left to match the navigation bar's width -->
+    <!-- The loaded content will be displayed here -->
+    </div>
+</body>
+</html>

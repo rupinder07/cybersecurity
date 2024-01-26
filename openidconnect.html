@@ -1,0 +1,64 @@
+<div>
+    <h1>OpenId Connect</h1>
+
+    <p>OpenID Connect (OIDC) is an authentication protocol and identity layer built on top of <a href="oauth.html">OAuth 2.0 </a>, designed to provide secure and standardized user authentication and identity verification on the internet. It extends OAuth 2.0's capabilities by adding an authentication layer, making it a powerful tool for single sign-on (SSO) and user identity management. OIDC is commonly used in scenarios where web applications or services need to verify the identity of end-users and obtain information about them.</p>
+    
+    <h2>Key components of OpenID Connect </h2>
+    
+    <ol type="1">
+        <li>
+            <strong>Relying Party (RP)</strong>
+            The Relying Party is a web application or service that relies on OIDC for user authentication and identity verification. The RP initiates the authentication process and receives identity information from the Identity Provider (IdP)
+        </li>
+        <li>
+            <strong>Identity Provider (IdP)</strong>
+            The Identity Provider is responsible for authenticating users and providing identity information to the RP. IdPs are trusted entities that confirm the user's identity using various authentication methods, such as passwords, multi-factor authentication (MFA), or social logins.
+        </li>
+    </ol>
+
+    <h2>How OpenID Connect Works</h2>
+    
+    <ol type="1">
+        <li>
+            <strong>RP Initialization</strong>
+            <p> The user initiates the authentication process by accessing a protected resource on the RP, which requires authentication. The RP generates a unique request identifier called nonce. </p>
+        </li>
+
+        <li>
+            <strong>Authentication Request</strong>
+            <p> The RP constructs an authentication request, including parameters like the client ID, scope (defining the requested identity claims), nonce, and a redirect URI where the user will be sent after authentication. </p>
+        </li>
+
+        <li>
+            <strong>User Redirection</strong>
+            <p> The user is presented with an authentication prompt at the IdP. The user provides their credentials (e.g., username and password) or uses another authentication method (e.g., biometrics). </p>
+        </li>
+
+        <li>
+            <strong>Authorization and Consent</strong>
+            <p> After successful authentication, the IdP may present a consent screen to the user, showing the requested identity claims. The user consents to sharing this information with the RP. </p>
+        </li>
+
+        <li>
+            <strong>ID Token Issuance</strong>
+            <p> Upon user consent, the IdP issues an ID token, which is a JWT containing user information (claims) and is signed by the IdP. The ID token typically includes the user's name, email, subject identifier, and any additional claims requested by the RP. </p>
+        </li>
+
+        <li>
+            <strong>Token Response</strong>
+            <p> The ID token is sent back to the RP via the user's browser and the redirect URI. </p>
+        </li>
+
+        <li>
+            <strong>RP Verification</strong>
+            <p> The RP verifies the ID token's signature, checks the nonce to prevent replay attacks, and ensures the audience claim matches its own client ID. Additional security checks may include verifying the token's expiration and issuer. </p>
+        </li>
+
+        <li>
+            <strong>User Session</strong>
+            <p> The user is considered authenticated, and their session is established with the RP. The RP may provide access to protected resources or personalize the user experience based on the received identity information </p>
+        </li>
+    </ol>
+</div>
+
+

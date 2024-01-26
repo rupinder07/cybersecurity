@@ -1,0 +1,71 @@
+
+header {
+    background-color: darkblue; /* Set the background color to a light shade of blue */
+    padding: 10px; /* Add some padding for spacing */
+    text-align: left; /* Align the text to the left */
+}
+header h1 {
+    font-weight: bold; /* Make the text bold */
+    color: white; /* Set the text color to dark blue */
+    margin: 0; /* Remove any default margins */
+}
+
+.nav-bar {
+    background-color: lightblue; /* Set the background color to light blue */
+    width: 15%; /* 15% width for the navigation bar */
+    position: fixed;
+    height: 100%;
+    overflow: hidden;
+    transition: width 0.3s; /* Add a transition for smooth animation */
+  }
+  
+  /* Style the main menu items */
+  .nav-item {
+    font-weight: bold;
+    list-style: none;
+    cursor: pointer;
+    padding: 10px;
+    position: relative;
+  }
+  
+  /* Style the submenu items */
+  .sub-menu {
+    display: none; /* Hide submenu by default */
+    padding-left: 20px; /* Indent the submenu items */
+    left: 100%; /* Move submenu to the right of the main menu item */
+    top: 0;
+  }
+
+  nav-item::before {
+    content: '▶'; /* Use arrow character */
+    position: absolute;
+    left: 5px; /* Adjust the arrow's position */
+  }
+
+.content {
+margin-left: 15%; /* Adjust margin-left to match the navigation bar's width */
+}
+
+h1 {
+color: #333;
+
+}
+h2 {
+    color: #666;
+}
+ol {
+    list-style-type: lower-alpha;
+    margin-left: 20px;
+}
+li {
+    margin-bottom: 10px;
+}
+p {
+    margin: 5px 0;
+}
+code {
+    background-color: #f4f4f4;
+    padding: 2px 5px;
+    border-radius: 3px;
+    font-family: monospace;
+}
